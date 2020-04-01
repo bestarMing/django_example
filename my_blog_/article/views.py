@@ -12,6 +12,18 @@ from .models import ArticlePost
 
 import markdown
 
+
+# 删文章
+def article_delete(request, id):
+    # 根据 id 获取需要删除的文章
+    article = ArticlePost.objects.get(id=id)
+    # 调用.delete()方法删除文章
+    article.delete()
+    # 完成删除后返回文章列表
+    return redirect("article:article_list")
+
+
+
 # 写文章的视图
 def article_create(request):
     # 判断用户是否提交数据
