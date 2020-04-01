@@ -11,7 +11,14 @@ from .models import ArticlePost
 # 文章详情
 
 import markdown
-
+# 安全删除文章
+def article_safe_delete(request, id):
+    if request.method == 'POST':
+        article = ArticlePost.objects.get(id=id)
+        article.delete()
+        return redirect("article:article_list")
+    else:
+        return HttpResponse("仅允许post请求")
 
 # 删文章
 def article_delete(request, id):
