@@ -1,4 +1,3 @@
-
 # 引入redirect重定向模块
 from django.shortcuts import render, redirect
 # 引入HttpResponse
@@ -9,8 +8,11 @@ from .forms import ArticlePostForm
 from django.contrib.auth.models import User
 from .models import ArticlePost
 # 文章详情
+from django.contrib.auth.decorators import login_required
 
 import markdown
+
+
 # 更新文章
 def article_update(request, id):
     """
@@ -43,10 +45,9 @@ def article_update(request, id):
         # 创建表单类实例
         article_post_form = ArticlePostForm()
         # 赋值上下文，将 article 文章对象也传递进去，以便提取旧的内容
-        context = { 'article': article, 'article_post_form': article_post_form }
+        context = {'article': article, 'article_post_form': article_post_form}
         # 将响应返回到模板中
         return render(request, 'article/update.html', context)
-
 
 
 # 安全删除文章
@@ -58,6 +59,7 @@ def article_safe_delete(request, id):
     else:
         return HttpResponse("仅允许post请求")
 
+
 # 删文章
 def article_delete(request, id):
     # 根据 id 获取需要删除的文章
@@ -68,8 +70,8 @@ def article_delete(request, id):
     return redirect("article:article_list")
 
 
-
 # 写文章的视图
+@login_required(login_url='/userprofile/login/')
 def article_create(request):
     # 判断用户是否提交数据
     if request.method == "POST":
@@ -82,7 +84,7 @@ def article_create(request):
             # 指定数据库中 id=1 的用户为作者
             # 如果你进行过删除数据表的操作，可能会找不到id=1的用户
             # 此时请重新创建用户，并传入此用户的id
-            new_article.author = User.objects.get(id=1)
+            new_article.author = User.objects.get(id=request.user.id)
             # 将新文章保存到数据库中
             new_article.save()
             # 完成后返回到文章列表
@@ -95,29 +97,34 @@ def article_create(request):
         # 创建表单类实例
         article_post_form = ArticlePostForm()
         # 赋值上下文
-        context = { 'article_post_form': article_post_form }
+        context = {'article_post_form': article_post_form}
         # 返回模板
         return render(request, 'article/create.html', context)
+
 
 def article_detail(request, id):
     article = ArticlePost.objects.get(id=id)
 
     # 将markdown语法渲染成html样式
     article.body = markdown.markdown(article.body,
-        extensions=[
-        # 包含 缩写、表格等常用扩展
-        'markdown.extensions.extra',
-        # 语法高亮扩展
-        'markdown.extensions.codehilite',
-        ])
+                                     extensions=[
+                                         # 包含 缩写、表格等常用扩展
+                                         'markdown.extensions.extra',
+                                         # 语法高亮扩展
+                                         'markdown.extensions.codehilite',
+                                     ])
 
-    context = { 'article': article }
+    context = {'article': article}
     return render(request, 'article/detail.html', context)
+
 
 def article_list(request):
     # 取出所有博客文章
     articles = ArticlePost.objects.all()
     # 需要传递给模板（templates）的对象
-    context = { 'articles': articles }
+    context = {'articles': articles}
     # render函数：载入模板，并返回context对象
     return render(request, 'article/list.html', context)
+
+
+
