@@ -45,12 +45,13 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\work\git_project\Hello_django\blogproject\blog\static\blog" />
-      <recent name="D:\work\git_project\Hello_django\blogproject\static\blog" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\work\git_project\Hello_django\blogproject" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\git_project\dusai_blog_django\blogproject\templates\blog\inclusions" />
+      <recent name="D:\work\git_project\Hello_django\blogproject\blog\static\blog" />
+      <recent name="D:\work\git_project\Hello_django\blogproject\static\blog" />
     </key>
   </component>
   <component name="RunManager">
@@ -89,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585879331875</updated>
       <workItem from="1585879333313" duration="8210000" />
-      <workItem from="1585896822026" duration="7431000" />
+      <workItem from="1585896822026" duration="9407000" />
     </task>
     <servers />
   </component>
