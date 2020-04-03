@@ -90,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585879331875</updated>
       <workItem from="1585879333313" duration="8210000" />
-      <workItem from="1585896822026" duration="9407000" />
+      <workItem from="1585896822026" duration="10621000" />
     </task>
     <servers />
   </component>
@@ -106,20 +106,9 @@
       <screen x="65" y="0" width="1471" height="864" />
     </state>
     <state x="776" y="261" key="com.intellij.ide.util.TipDialog/65.0.1471.864@65.0.1471.864" timestamp="1585896825443" />
-    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1585901003074">
+    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1585913324734">
       <screen x="65" y="0" width="1471" height="864" />
     </state>
-    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup/65.0.1471.864@65.0.1471.864" timestamp="1585901003074" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/blog/views.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup/65.0.1471.864@65.0.1471.864" timestamp="1585913324734" />
   </component>
 </project>
