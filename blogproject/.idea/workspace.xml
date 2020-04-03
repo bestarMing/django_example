@@ -10,6 +10,9 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="blogproject" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -86,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585879331875</updated>
       <workItem from="1585879333313" duration="8210000" />
-      <workItem from="1585896822026" duration="3157000" />
+      <workItem from="1585896822026" duration="6438000" />
     </task>
     <servers />
   </component>
@@ -102,5 +105,20 @@
       <screen x="65" y="0" width="1471" height="864" />
     </state>
     <state x="776" y="261" key="com.intellij.ide.util.TipDialog/65.0.1471.864@65.0.1471.864" timestamp="1585896825443" />
+    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1585901003074">
+      <screen x="65" y="0" width="1471" height="864" />
+    </state>
+    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup/65.0.1471.864@65.0.1471.864" timestamp="1585901003074" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/blog/views.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

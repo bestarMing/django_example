@@ -19,6 +19,39 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/pace.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
+     <link href="https://cdn.bootcss.com/highlight.js/9.15.8/styles/github.min.css" rel="stylesheet">
+
+  <style>
+    .codehilite {
+      padding: 0;
+    }
+
+    /* for block of numbers */
+    .hljs-ln-numbers {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      text-align: center;
+      color: #ccc;
+      border-right: 1px solid #CCC;
+      vertical-align: top;
+      padding-right: 5px;
+    }
+
+    .hljs-ln-n {
+      width: 30px;
+    }
+
+    /* for block of code */
+    .hljs-ln .hljs-ln-code {
+      padding-left: 10px;
+      white-space: pre;
+    }
+  </style>
 </head>
 
 <body id="single">
@@ -79,7 +112,7 @@
                         </div>
                       </header>
                       <div class="entry-content clearfix">
-                        {{ post.body }}
+                        {{ post.body|safe }}
                       </div>
                     </article>
                 <section class="comment-area" id="comment-area">
@@ -141,30 +174,23 @@
                     </div>
                 </section>
                 {% endblock main %}
-                {% block toc %}
+
             </main>
             <aside class="col-md-4">
+                    {% block toc %}
+                        {% if post.toc %}
                 <div class="widget widget-content">
                     <h3 class="widget-title">文章目录</h3>
                     <ul>
-                        <li>
-                            <a href="#">教程特点</a>
-                        </li>
-                        <li>
-                            <a href="#">谁适合这个教程</a>
-                        </li>
-                        <li>
-                            <a href="#">在线预览</a>
-                        </li>
-                        <li>
-                            <a href="#">资源列表</a>
-                        </li>
-                        <li>
-                            <a href="#">获取帮助</a>
-                        </li>
+                        {{ post.toc|safe }}
                     </ul>
                 </div>
+                        {% endif %}
+
                 {% endblock toc %}
+                <div class="toc">
+                  <ul></ul>
+                </div>
                 <div class="widget widget-recent-posts">
                     <h3 class="widget-title">最新文章</h3>
                     <ul>
@@ -278,6 +304,12 @@
 </div>
 
 <script src="js/script.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+  <script src="https://cdn.bootcss.com/highlightjs-line-numbers.js/2.7.0/highlightjs-line-numbers.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+  </script>
 
 </body>
 </html>
