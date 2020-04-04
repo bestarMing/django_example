@@ -90,7 +90,8 @@
       <option name="presentableId" value="Default" />
       <updated>1585879331875</updated>
       <workItem from="1585879333313" duration="8210000" />
-      <workItem from="1585896822026" duration="14012000" />
+      <workItem from="1585896822026" duration="15908000" />
+      <workItem from="1585971480363" duration="519000" />
     </task>
     <servers />
   </component>
@@ -102,10 +103,10 @@
       <screen x="65" y="0" width="1471" height="864" />
     </state>
     <state x="305" y="77" key="SettingsEditor/65.0.1471.864@65.0.1471.864" timestamp="1585899990852" />
-    <state x="776" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1585896825443">
+    <state x="776" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1585971494526">
       <screen x="65" y="0" width="1471" height="864" />
     </state>
-    <state x="776" y="261" key="com.intellij.ide.util.TipDialog/65.0.1471.864@65.0.1471.864" timestamp="1585896825443" />
+    <state x="776" y="261" key="com.intellij.ide.util.TipDialog/65.0.1471.864@65.0.1471.864" timestamp="1585971494526" />
     <state x="464" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1585913324734">
       <screen x="65" y="0" width="1471" height="864" />
     </state>
